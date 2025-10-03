@@ -1,4 +1,4 @@
-#include <minoizer.h>
+#include "minoizer.h"
 #include <stdexcept>
 
 std::map<std::string, int> cache;
