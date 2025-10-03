@@ -3,7 +3,9 @@ minoizer
 ========
 
 minoizer (minimal memoizer) is a tiny C++ library for memoizing
-results from expensive computation.
+results from expensive computation. It has rather been written
+with the intention of being a experimental project to get in
+touch with C++ and dynamic programming.
 
 How to use
 ----------
@@ -26,7 +28,7 @@ programming" approach for fast fibonacci number computation.
 How to develop
 --------------
 
-Prerequisites for development:
+A UNIX environment is assumed additionally to the following prerequisites:
 
   - g++
   - python3
