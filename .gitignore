@@ -16,3 +16,5 @@
 *.la
 *.a
 *.out
+
+.vscode
