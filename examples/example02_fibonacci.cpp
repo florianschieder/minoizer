@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <cache.h>
+#include <minoizer.h>
 
 int fib(int n)
 {
@@ -10,7 +10,7 @@ int fib(int n)
     if (n == 1)
         return 1;
 
-    return cached(&fib, n - 1) + cached(&fib, n - 2);
+    return memo(&fib, n - 1) + memo(&fib, n - 2);
 }
 
 int main()
@@ -18,7 +18,7 @@ int main()
     // Reaching overflow after fibonacci numbers >= 47
     for (int i = 46; i >= 1; i--)
     {
-        printf("fib(%d) = %d\n", i, cached(&fib, i));
+        printf("fib(%d) = %d\n", i, memo(&fib, i));
     }
 
     return EXIT_SUCCESS;

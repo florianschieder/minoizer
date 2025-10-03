@@ -1,11 +1,12 @@
-#include "cache.h"
+#include <minoizer.h>
+#include <stdexcept>
 
 std::map<std::string, int> cache;
 
-int cached(int (*function)(int), int param)
+int memo(int (*function)(int), int param)
 {
     char id[256];
-    sprintf(id, "__cached__%p__%d", function, param);
+    sprintf(id, "__memoized__%p__%d", function, param);
 
     std::string cache_id = std::string(id);
 
